@@ -10,10 +10,10 @@ int main(int argc, char *argv[])
     char *out_fn;
     if(argc > 1) {
         bmp = BMP_ReadFile(argv[argc - 1]);
-	if(!bmp) {
-	    printf("Not a BMP\n");
-	    return -1;;
-	}
+        if(!bmp) {
+            printf("Not a BMP\n");
+            return -1;;
+        }
         if(BMP_GetDepth(bmp) != 24) {
             printf("Sorry, bmp2esi can only convert 24bit bmps.\n");
             printf("Honestly, it's not even hard to convert 32 bit bmps.\n");
